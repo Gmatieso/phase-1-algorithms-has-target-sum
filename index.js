@@ -1,6 +1,43 @@
-function hasTargetSum(array, target) {
-  // Write your algorithm here
+// function hasTargetSum(array, target) {
+
+//   // let total = 0;  
+//   //  iterate from the beggining to the middle of the array vice versa 
+//   for(let i = 0; i < array.length/2; i++)
+//   {
+//     // // vice versa 
+//     let j = array.length -1 -i;
+//     // for(let j = array.length -1; j < array.length; j--){
+
+//     // }
+
+// // sum the integer we're Iterating Over to the corresponding Interger at the end of the array 
+
+//   // total = array[i] + array[j]; 
+
+//   // compare sum of two integers with target 
+
+//     if(array[i] + array[j] == target )return true;
+   
+// }
+// }
+
+function hasTargetSum(array, target){
+  // looping through the array first time 
+  for(let i = 0; i < array.length; i++)
+  {
+    // looping through the array the second time
+    for(let j = (i+1); j < array.length; j++)
+    {
+      if(array[i] + array[j] == target)
+      {
+        return true
+      }
+    }
+  }
+  return false
 }
+
+// hasTargetSum()
 
 /* 
   Write the Big O time complexity of your function here
@@ -32,3 +69,20 @@ if (require.main === module) {
 }
 
 module.exports = hasTargetSum;
+
+// // Don't Think hard, Just Think about it
+// function hasTargetSum(array, target){
+//   // looping through the array first time 
+//   for(let i = 0; i < array.length; i++)
+//   {
+//     // looping through the array the second time
+//     for(let j = (i+1); j < array.length; j++)
+//     {
+//       if(array[i] + array[j] == num)
+//       {
+//         return true
+//       }
+//     }
+//   }
+//   return false
+// }
